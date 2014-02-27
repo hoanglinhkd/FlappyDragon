@@ -37,7 +37,6 @@
 -(id) init
 {
 	if( (self=[super init])) {
-
 		// ask director for the window size
 		CGSize size = [[CCDirector sharedDirector] winSize];
 
@@ -64,3 +63,4 @@
 	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[HelloWorldLayer scene] ]];
 }
 @end
+

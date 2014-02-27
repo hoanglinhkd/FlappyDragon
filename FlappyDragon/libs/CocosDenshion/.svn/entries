@@ -1,0 +1,126 @@
+10
+
+dir
+0
+https://hoanglinhkd@github.com/hoanglinhkd/FWFL.git/trunk/FlappyDragon/FlappyDragon/libs/CocosDenshion
+https://hoanglinhkd@github.com/hoanglinhkd/FWFL.git
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+935c364e-33e7-e0e1-dbe7-ce57b7db7bff
+
+CDXMacOSXSupport.m
+file
+
+
+
+add
+
+CDConfig.h
+file
+
+
+
+add
+
+CocosDenshion.h
+file
+
+
+
+add
+
+CDXPropertyModifierAction.h
+file
+
+
+
+add
+
+SimpleAudioEngine.h
+file
+
+
+
+add
+
+CDOpenALSupport.h
+file
+
+
+
+add
+
+CDAudioManager.h
+file
+
+
+
+add
+
+CocosDenshion.m
+file
+
+
+
+add
+
+CDXPropertyModifierAction.m
+file
+
+
+
+add
+
+CDXMacOSXSupport.h
+file
+
+
+
+add
+
+README.md
+file
+
+
+
+add
+
+SimpleAudioEngine.m
+file
+
+
+
+add
+
+CDOpenALSupport.m
+file
+
+
+
+add
+
+CDAudioManager.m
+file
+
+
+
+add
+

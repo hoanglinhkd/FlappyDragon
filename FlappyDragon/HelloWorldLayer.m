@@ -15,6 +15,13 @@
 
 #pragma mark - HelloWorldLayer
 
+@interface HelloWorldLayer(){
+    NSMutableArray *arrFrameNameBird;
+    NSTimer *timeRunGlobalAction;
+    BOOL isStarted;
+}
+
+@end
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
 
@@ -40,68 +47,40 @@
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super init]) ) {
-		
-		// create and initialize a Label
-		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Marker Felt" fontSize:64];
-
-		// ask director for the window size
-		CGSize size = [[CCDirector sharedDirector] winSize];
-	
-		// position the label on the center of the screen
-		label.position =  ccp( size.width /2 , size.height/2 );
-		
-		// add the label as a child to this Layer
-		[self addChild: label];
-		
-		
-		
-		//
-		// Leaderboards and Achievements
-		//
-		
-		// Default font size will be 28 points.
-		[CCMenuItemFont setFontSize:28];
-		
-		// to avoid a retain-cycle with the menuitem and blocks
-		__block id copy_self = self;
-		
-		// Achievement Menu Item using blocks
-		CCMenuItem *itemAchievement = [CCMenuItemFont itemWithString:@"Achievements" block:^(id sender) {
-			
-			
-			GKAchievementViewController *achivementViewController = [[GKAchievementViewController alloc] init];
-			achivementViewController.achievementDelegate = copy_self;
-			
-			AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-			
-			[[app navController] presentModalViewController:achivementViewController animated:YES];
-			
-			[achivementViewController release];
-		}];
-		
-		// Leaderboard Menu Item using blocks
-		CCMenuItem *itemLeaderboard = [CCMenuItemFont itemWithString:@"Leaderboard" block:^(id sender) {
-			
-			
-			GKLeaderboardViewController *leaderboardViewController = [[GKLeaderboardViewController alloc] init];
-			leaderboardViewController.leaderboardDelegate = copy_self;
-			
-			AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-			
-			[[app navController] presentModalViewController:leaderboardViewController animated:YES];
-			
-			[leaderboardViewController release];
-		}];
-
-		
-		CCMenu *menu = [CCMenu menuWithItems:itemAchievement, itemLeaderboard, nil];
-		
-		[menu alignItemsHorizontallyWithPadding:20];
-		[menu setPosition:ccp( size.width/2, size.height/2 - 50)];
-		
-		// Add the menu to the layer
-		[self addChild:menu];
-
+        
+        //init status of scenes
+        [self setTouchEnabled:YES];
+        
+        // init frame resource center
+        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"resource1.plist"];
+        
+        // the major background
+        CCSprite *bg = [CCSprite spriteWithSpriteFrameName:@"bg.png"];
+        bg.anchorPoint = ccp(0, 0);
+        bg.scale = 2.22222*2;
+        [self addChild:bg z:-1];
+        
+        // our bird
+		CCSprite *bird = [CCSprite spriteWithSpriteFrameName:@"bird1.png"];
+        bird.scale = 2.22222*2;
+        CGSize size = [[CCDirector sharedDirector] winSize];
+        bird.position = ccp(size.width/2, size.height/2);
+        [self addChild:bird];
+        bird.tag = 1;
+        
+        //init NameFrame For Bird
+        arrFrameNameBird = [[NSMutableArray alloc] initWithCapacity:3];
+        for (int i=1; i<=3; i++) {
+            NSString *nameFrame = [NSString stringWithFormat:@"bird%d.png",i];
+            CCSpriteFrame *spriteFrame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:nameFrame];
+            spriteFrame.rotated = YES;
+            [arrFrameNameBird addObject:spriteFrame];
+        }
+        /*
+		timeRunGlobalAction = [NSTimer timerWithTimeInterval:1.0f/24.0f target:self selector:@selector(runDefaultAction) userInfo:nil repeats:YES];
+        [timeRunGlobalAction fire];
+         */
+        //bird runAction:<#(CCAction *)#>
 	}
 	return self;
 }
@@ -130,4 +109,57 @@
 	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
 	[[app navController] dismissModalViewControllerAnimated:YES];
 }
+
+#pragma mark - Touch Delegate
+- (void) ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    if (isStarted==NO) {
+        [self runDefaultAction];
+        isStarted = YES;
+    }
+    //get bird from self
+    CCSprite *bird = (CCSprite*)[self getChildByTag:1];
+    bird.rotationX = 5;
+    
+    //CCAnimation *a = [CCAnimation animationWithSpriteFrames:arrFrameNameBird delay:1.0f/24.0f];
+    //[bird runAction:[CCAnimate actionWithAnimation:a]];
+    [bird runAction:[CCMoveBy actionWithDuration:0.2f position:ccp(0, 100)]];
+    
+}
+
+- (void) ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    /*
+    CCSprite *bird = (CCSprite*)[self getChildByTag:1];
+    CCAnimation *a = [CCAnimation animationWithSpriteFrames:arrFrameNameBird delay:1.0f/24.0f];
+    [bird runAction:[CCAnimate actionWithAnimation:a]];
+    [bird runAction:[CCMoveBy actionWithDuration:0.25 position:ccp(0,-5)]];
+     */
+    //[self runDefaultAction];
+}
+
+#pragma mark - Run Action
+/*
+- (void) runDefaultAction{
+    CCSprite *bird = (CCSprite*)[self getChildByTag:1];
+    CCAnimation *a = [CCAnimation animationWithSpriteFrames:arrFrameNameBird delay:1.0f/24.0f];
+    [bird runAction:[CCAnimate actionWithAnimation:a]];
+    [bird runAction:[CCSequence actions:[CCMoveBy actionWithDuration:3.0f/24.0f position:ccp(0,-10)],
+                                        [CCCallFunc actionWithTarget:self selector:@selector(runDefaultAction)],nil]];
+}
+ */
+- (void) runDefaultAction{
+    CCSprite *bird = (CCSprite*)[self getChildByTag:1];
+    CCAnimation *a = [CCAnimation animationWithSpriteFrames:arrFrameNameBird delay:1.0f/24.0f];
+    //[bird runAction:[CCAnimate actionWithAnimation:a]];
+    //[bird runAction:[CCMoveBy actionWithDuration:3.0f/24.0f position:ccp(0,-10)]];
+    CCRepeatForever *action = [CCRepeatForever actionWithAction:
+                               [CCAnimate actionWithAnimation:a]];
+    [bird runAction:action];
+    bird.flipX = YES;
+    //CCRepeatForever *actionFall = [Utils getCCRepeatForeverFallDown];
+    //[bird runAction:actionFall];
+    bird.rotationX = 2;
+    bird.rotationY = 4;
+}
+
+
 @end

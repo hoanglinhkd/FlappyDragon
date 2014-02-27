@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84876E4118B7394B002EABFE /* duke_spritesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 84876E4018B7394B002EABFE /* duke_spritesheet.png */; };
+		84876E4318B73C0C002EABFE /* sprites_list.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84876E4218B73C0C002EABFE /* sprites_list.plist */; };
+		84876E4818B73D8A002EABFE /* h1.png in Resources */ = {isa = PBXBuildFile; fileRef = 84876E4418B73D8A002EABFE /* h1.png */; };
+		84876E4918B73D8A002EABFE /* h2.png in Resources */ = {isa = PBXBuildFile; fileRef = 84876E4518B73D8A002EABFE /* h2.png */; };
+		84876E4A18B73D8A002EABFE /* h3.png in Resources */ = {isa = PBXBuildFile; fileRef = 84876E4618B73D8A002EABFE /* h3.png */; };
+		84876E4B18B73D8A002EABFE /* h4.png in Resources */ = {isa = PBXBuildFile; fileRef = 84876E4718B73D8A002EABFE /* h4.png */; };
+		84E7AD9A18BD82BF00211ECA /* reource1.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E7AD9818BD82BE00211ECA /* reource1.png */; };
+		84E7AD9B18BD82BF00211ECA /* resource1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84E7AD9918BD82BE00211ECA /* resource1.plist */; };
+		84E7ADAF18BDE0FA00211ECA /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E7ADAE18BDE0FA00211ECA /* Utils.m */; };
 		CE129C9A18B08F660073D8E0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE129C9918B08F660073D8E0 /* QuartzCore.framework */; };
 		CE129C9C18B08F660073D8E0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE129C9B18B08F660073D8E0 /* OpenGLES.framework */; };
 		CE129C9E18B08F660073D8E0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE129C9D18B08F660073D8E0 /* OpenAL.framework */; };
@@ -141,9 +150,20 @@
 		CE129E4018B08F690073D8E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE129E3F18B08F690073D8E0 /* AppDelegate.m */; };
 		CE129E4318B08F690073D8E0 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE129E4218B08F690073D8E0 /* HelloWorldLayer.m */; };
 		CE129E4618B08F690073D8E0 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE129E4518B08F690073D8E0 /* IntroLayer.m */; };
+		CEB1B5C618B11210004FD1E8 /* traco.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB1B5C518B11210004FD1E8 /* traco.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84876E4018B7394B002EABFE /* duke_spritesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = duke_spritesheet.png; sourceTree = "<group>"; };
+		84876E4218B73C0C002EABFE /* sprites_list.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sprites_list.plist; sourceTree = "<group>"; };
+		84876E4418B73D8A002EABFE /* h1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h1.png; sourceTree = "<group>"; };
+		84876E4518B73D8A002EABFE /* h2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h2.png; sourceTree = "<group>"; };
+		84876E4618B73D8A002EABFE /* h3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h3.png; sourceTree = "<group>"; };
+		84876E4718B73D8A002EABFE /* h4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h4.png; sourceTree = "<group>"; };
+		84E7AD9818BD82BE00211ECA /* reource1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reource1.png; sourceTree = "<group>"; };
+		84E7AD9918BD82BE00211ECA /* resource1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = resource1.plist; sourceTree = "<group>"; };
+		84E7ADAD18BDE0FA00211ECA /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		84E7ADAE18BDE0FA00211ECA /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		CE129C9618B08F660073D8E0 /* FlappyDragon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyDragon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE129C9918B08F660073D8E0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CE129C9B18B08F660073D8E0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -425,6 +445,7 @@
 		CE129E4218B08F690073D8E0 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		CE129E4418B08F690073D8E0 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		CE129E4518B08F690073D8E0 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		CEB1B5C518B11210004FD1E8 /* traco.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = traco.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -448,6 +469,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84E7AD8F18BD80D100211ECA /* Birds */ = {
+			isa = PBXGroup;
+			children = (
+				84E7AD9818BD82BE00211ECA /* reource1.png */,
+				84E7AD9918BD82BE00211ECA /* resource1.plist */,
+			);
+			name = Birds;
+			path = Resources/Birds;
+			sourceTree = "<group>";
+		};
+		84E7ADAC18BDE0C200211ECA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				84E7ADAD18BDE0FA00211ECA /* Utils.h */,
+				84E7ADAE18BDE0FA00211ECA /* Utils.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		CE129C8D18B08F650073D8E0 = {
 			isa = PBXGroup;
 			children = (
@@ -485,6 +525,7 @@
 		CE129CAD18B08F660073D8E0 /* FlappyDragon */ = {
 			isa = PBXGroup;
 			children = (
+				84E7ADAC18BDE0C200211ECA /* Utilities */,
 				CE129E3E18B08F690073D8E0 /* AppDelegate.h */,
 				CE129E3F18B08F690073D8E0 /* AppDelegate.m */,
 				CE129E4118B08F690073D8E0 /* HelloWorldLayer.h */,
@@ -501,6 +542,8 @@
 		CE129CAE18B08F660073D8E0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				84E7AD8F18BD80D100211ECA /* Birds */,
+				CEB1B5C418B11205004FD1E8 /* Images */,
 				CE129CAF18B08F660073D8E0 /* Default.png */,
 				CE129CB118B08F660073D8E0 /* Default@2x.png */,
 				CE129CB318B08F660073D8E0 /* Default-568h@2x.png */,
@@ -879,6 +922,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CEB1B5C418B11205004FD1E8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				84876E4418B73D8A002EABFE /* h1.png */,
+				84876E4518B73D8A002EABFE /* h2.png */,
+				84876E4618B73D8A002EABFE /* h3.png */,
+				84876E4718B73D8A002EABFE /* h4.png */,
+				84876E4218B73C0C002EABFE /* sprites_list.plist */,
+				84876E4018B7394B002EABFE /* duke_spritesheet.png */,
+				CEB1B5C518B11210004FD1E8 /* traco.jpg */,
+			);
+			name = Images;
+			path = Resources/Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -942,6 +1000,15 @@
 				CE129CC218B08F670073D8E0 /* Icon@2x.png in Resources */,
 				CE129CC518B08F670073D8E0 /* iTunesArtwork in Resources */,
 				CE129E1E18B08F690073D8E0 /* ChangeLog in Resources */,
+				CEB1B5C618B11210004FD1E8 /* traco.jpg in Resources */,
+				84876E4118B7394B002EABFE /* duke_spritesheet.png in Resources */,
+				84876E4318B73C0C002EABFE /* sprites_list.plist in Resources */,
+				84876E4818B73D8A002EABFE /* h1.png in Resources */,
+				84876E4918B73D8A002EABFE /* h2.png in Resources */,
+				84876E4A18B73D8A002EABFE /* h3.png in Resources */,
+				84876E4B18B73D8A002EABFE /* h4.png in Resources */,
+				84E7AD9A18BD82BF00211ECA /* reource1.png in Resources */,
+				84E7AD9B18BD82BF00211ECA /* resource1.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1064,6 +1131,7 @@
 				CE129E4018B08F690073D8E0 /* AppDelegate.m in Sources */,
 				CE129E4318B08F690073D8E0 /* HelloWorldLayer.m in Sources */,
 				CE129E4618B08F690073D8E0 /* IntroLayer.m in Sources */,
+				84E7ADAF18BDE0FA00211ECA /* Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1120,6 +1188,7 @@
 				GCC_PREFIX_HEADER = FlappyDragon/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"FlappyDragon/libs/kazmath/include\"";
 				INFOPLIST_FILE = FlappyDragon/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
@@ -1139,6 +1208,7 @@
 				GCC_PREFIX_HEADER = FlappyDragon/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"FlappyDragon/libs/kazmath/include\"";
 				INFOPLIST_FILE = FlappyDragon/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
@@ -1169,6 +1239,7 @@
 				CE129E4B18B08F690073D8E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
